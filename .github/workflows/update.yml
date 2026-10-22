@@ -44,7 +44,7 @@ jobs:
           text = re.sub(r'version "[^"]+"', f'version "{version}"', text, count=1)
           rids = ["osx-arm64", "osx-x64", "linux-arm64", "linux-x64"]
           for rid, sha in zip(rids, sums):
-              pattern = rf'(url "https://github.com/NomaDamas/filee-cli/releases/download/)[^"]+(/filee-cli-)[^"]+(-{rid}\.tar\.gz"\n\s+sha256 ")[0-9a-f]{{64}}(")'
+              pattern = rf'(url "https://github.com/NomaDamas/filee-cli/releases/download/)[^"]+(/filee-cli-)[^"]+(-{rid}\.tar\.gz",\n\s+using: :nounzip\n\s+sha256 ")[0-9a-f]{{64}}(")'
               text, n = re.subn(pattern, rf'\g<1>{tag}\g<2>{version}\g<3>{sha}\g<4>', text)
               assert n == 1, f"{rid}: expected one match, got {n}"
           open(path, "w").write(text)
