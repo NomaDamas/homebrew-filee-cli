@@ -10,6 +10,12 @@ class FileeCli < Formula
     "MPL-2.0",
   ]
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+-\d+)$/i)
+    strategy :github_latest
+  end
+
   on_macos do
     on_arm do
       url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-1/filee-cli-2.0.0-1-osx-arm64.tar.gz"
@@ -30,12 +36,6 @@ class FileeCli < Formula
       url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-1/filee-cli-2.0.0-1-linux-x64.tar.gz"
       sha256 "802aec45793625a36d4a16fdd07f63b844904261e3abcf85c3e47e5fe3f14eb9"
     end
-  end
-
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+-\d+)$/i)
-    strategy :github_latest
   end
 
   def install

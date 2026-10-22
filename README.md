@@ -16,3 +16,5 @@ macOS (Apple silicon and Intel) and Linux (x64 and arm64). Windows: see the
 - The download is about 900 MB (the engines are in it). Homebrew checks its SHA-256.
 - This tap updates itself every few hours from the latest release of NomaDamas/filee-cli (`.github/workflows/update.yml`).
 - macOS packages are ad-hoc signed, not notarized (the same as Filee's own macOS packages).
+- `audit_exceptions/flat_namespace_allowlist.json`: the bundled LibreOffice is the vendor's own signed build and links with a
+  flat namespace; `brew audit` would otherwise reject the formula. The files are not rebuilt or relinked here.
