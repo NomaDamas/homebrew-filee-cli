@@ -72,6 +72,8 @@ class FileeCli < Formula
   end
 
   test do
+    # filee-cli keeps its settings in a data folder; the test sandbox does not allow writing to the home folder.
+    ENV["FILEE_DATA_DIR"] = testpath/"data"
     assert_match "filee #{version.to_s.split("-").first}", shell_output("#{bin}/filee-cli version")
     (testpath/"in.md").write("# Hello\n\nfilee-cli test\n")
     system bin/"filee-cli", "convert", testpath/"in.md", "--to", "html"
