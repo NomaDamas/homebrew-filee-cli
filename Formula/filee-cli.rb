@@ -1,7 +1,7 @@
 class FileeCli < Formula
   desc "Unofficial CLI-only build of Filee: offline file converter for 255 formats"
   homepage "https://github.com/NomaDamas/filee-cli"
-  version "2.0.0-1"
+  version "2.0.0-2"
   license all_of: [
     "MIT",
     "GPL-3.0-or-later",
@@ -18,27 +18,27 @@ class FileeCli < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-1/filee-cli-2.0.0-1-osx-arm64.tar.gz",
+      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-2/filee-cli-2.0.0-2-osx-arm64.tar.gz",
           using: :nounzip
-      sha256 "6cc5434feaddabe75cae0a9d6ed4437534c80294ce2b2cf8f5a5ef04aa6b2088"
+      sha256 "8d4012171374c5a06409676833a790c4d72d88c3e366ea9e7d3dedd42587eff5"
     end
     on_intel do
-      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-1/filee-cli-2.0.0-1-osx-x64.tar.gz",
+      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-2/filee-cli-2.0.0-2-osx-x64.tar.gz",
           using: :nounzip
-      sha256 "83eb2512b2c56310bbdb92cf1eb3d2c36c3b7acac5fdd6ebc6c43fb71960ca11"
+      sha256 "4537ed81da3ee64bfb525c5d2a314657b71949d5518f44dce184b140db5b499b"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-1/filee-cli-2.0.0-1-linux-arm64.tar.gz",
+      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-2/filee-cli-2.0.0-2-linux-arm64.tar.gz",
           using: :nounzip
-      sha256 "48bba4d22155304f068fb70394c1013a906d073577906fd430e6d1bc74b7029c"
+      sha256 "ab989d840725becf91cb5d33b68bea8cfdd629b8cdca61b186e3fc5d32b511eb"
     end
     on_intel do
-      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-1/filee-cli-2.0.0-1-linux-x64.tar.gz",
+      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-2/filee-cli-2.0.0-2-linux-x64.tar.gz",
           using: :nounzip
-      sha256 "802aec45793625a36d4a16fdd07f63b844904261e3abcf85c3e47e5fe3f14eb9"
+      sha256 "b802882b94ae7f7324a3c7cdd063579f85d6c94fcba9335bc5497494de2e6d2e"
     end
   end
 
