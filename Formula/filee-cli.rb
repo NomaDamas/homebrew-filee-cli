@@ -1,7 +1,7 @@
 class FileeCli < Formula
   desc "Unofficial CLI-only build of Filee: offline file converter for 255 formats"
   homepage "https://github.com/NomaDamas/filee-cli"
-  version "2.0.0-2"
+  version "2.0.0-3"
   license all_of: [
     "MIT",
     "GPL-3.0-or-later",
@@ -18,27 +18,27 @@ class FileeCli < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-2/filee-cli-2.0.0-2-osx-arm64.tar.gz",
+      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-3/filee-cli-2.0.0-3-osx-arm64.tar.gz",
           using: :nounzip
-      sha256 "8d4012171374c5a06409676833a790c4d72d88c3e366ea9e7d3dedd42587eff5"
+      sha256 "e5e277e02a200001b2d7e0f63b5039497b1be99354f32e9ff534a4b0286088cc"
     end
     on_intel do
-      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-2/filee-cli-2.0.0-2-osx-x64.tar.gz",
+      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-3/filee-cli-2.0.0-3-osx-x64.tar.gz",
           using: :nounzip
-      sha256 "4537ed81da3ee64bfb525c5d2a314657b71949d5518f44dce184b140db5b499b"
+      sha256 "255d3f06d7df4ad367d99d63cbe542c2cda8b86fef071141c5cf52be973939de"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-2/filee-cli-2.0.0-2-linux-arm64.tar.gz",
+      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-3/filee-cli-2.0.0-3-linux-arm64.tar.gz",
           using: :nounzip
-      sha256 "ab989d840725becf91cb5d33b68bea8cfdd629b8cdca61b186e3fc5d32b511eb"
+      sha256 "07123e5cab6fb15a07c493e819635906c0eb4a50cfa54aea53b32b1cb557ce7c"
     end
     on_intel do
-      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-2/filee-cli-2.0.0-2-linux-x64.tar.gz",
+      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.0.0-3/filee-cli-2.0.0-3-linux-x64.tar.gz",
           using: :nounzip
-      sha256 "b802882b94ae7f7324a3c7cdd063579f85d6c94fcba9335bc5497494de2e6d2e"
+      sha256 "3388a2a33b5dea7eec97a35e180073e3e395c52749e0933d8d7bb5709a05b463"
     end
   end
 
