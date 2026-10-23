@@ -1,9 +1,13 @@
 name: Update formula
 
-# Polls the latest release of NomaDamas/filee-cli and rewrites Formula/filee-cli.rb from its SHA256SUMS. No token
+# Rewrites the formula from the latest release of NomaDamas/filee-cli and rewrites Formula/filee-cli.rb from its SHA256SUMS. No token
 # beyond the job's own GITHUB_TOKEN is used: the release repository is public, and this repository only writes itself.
 
 on:
+  # The release workflow of NomaDamas/filee-cli pushes a tag `release-<version>` here (with a deploy key that can write
+  # to this repository only) the moment it publishes a release. The schedule is the fallback.
+  push:
+    tags: ['release-*']
   schedule:
     - cron: '17 */6 * * *'
   workflow_dispatch:
@@ -22,6 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: main
           persist-credentials: true
 
       - name: Rewrite the formula from the latest release
