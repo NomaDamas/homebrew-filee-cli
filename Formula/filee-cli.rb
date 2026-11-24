@@ -1,7 +1,7 @@
 class FileeCli < Formula
   desc "Unofficial CLI-only build of Filee: offline file converter for 255 formats"
   homepage "https://github.com/NomaDamas/filee-cli"
-  version "2.2.0-1"
+  version "2.5.0-1"
   license all_of: [
     "MIT",
     "GPL-3.0-or-later",
@@ -18,27 +18,27 @@ class FileeCli < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.2.0-1/filee-cli-2.2.0-1-osx-arm64.tar.gz",
+      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.5.0-1/filee-cli-2.5.0-1-osx-arm64.tar.gz",
           using: :nounzip
-      sha256 "1eb06ecd3ff1c38067f454aa8a9d48a317210ea171ddf2f371d08599db9f7a4e"
+      sha256 "822fe13e88a3fd0ea1f6306c30d4aa79462a0c54ed5c6a69cb9077ea9ea9ad4d"
     end
     on_intel do
-      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.2.0-1/filee-cli-2.2.0-1-osx-x64.tar.gz",
+      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.5.0-1/filee-cli-2.5.0-1-osx-x64.tar.gz",
           using: :nounzip
-      sha256 "60b0195fb4d16d6eaebe729bf7e2a2367e94721598c40c4ae197266098cccb98"
+      sha256 "deb33ebebae9d8b42b422098ad8d04a86ad3acda41043b6969b70bd2901336ba"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.2.0-1/filee-cli-2.2.0-1-linux-arm64.tar.gz",
+      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.5.0-1/filee-cli-2.5.0-1-linux-arm64.tar.gz",
           using: :nounzip
-      sha256 "7262e7ab26dd96da03ff1d71f47bee2f52a7a8496cacf56b0e6438b4541f0f01"
+      sha256 "f5520ab8dc39b80c8c464d9f8519aebb3090edffbe21009fb681a8be683e6b08"
     end
     on_intel do
-      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.2.0-1/filee-cli-2.2.0-1-linux-x64.tar.gz",
+      url "https://github.com/NomaDamas/filee-cli/releases/download/v2.5.0-1/filee-cli-2.5.0-1-linux-x64.tar.gz",
           using: :nounzip
-      sha256 "fd71117c13911ec5e0797581655b2b92ffb2fae92daf225514efc45c7b4f2d86"
+      sha256 "8bb8220be2a9e206560659491d486f4680d2ddf2e384ce35d1fe542d4f541a9a"
     end
   end
 
